@@ -2,13 +2,12 @@
 #
 # This file is the copy kept next to the Swift sources. The installable tap is
 # TimmyAmant/homebrew-tokenledger (brew install TimmyAmant/tokenledger/tokenledger).
-# Keep the two in sync when cutting a CLI release: bump version, sha256, and
-# the GitHub release asset, then run `./scripts/package-cli.sh`.
+# Keep the two in sync when cutting a CLI release (`./scripts/release-cli.sh`).
 class Tokenledger < Formula
   desc "Reads local AI coding transcripts and uploads token counts"
   homepage "https://tokenledger.app"
-  url "https://github.com/TimmyAmant/homebrew-tokenledger/releases/download/v0.1.0/tokenledger-0.1.0.tar.gz"
-  sha256 "6878fc8b3058446935701ae25dfbd5cc763b8dce59c0bdd732d8a98d16d11294"
+  url "https://github.com/TimmyAmant/homebrew-tokenledger/releases/download/v0.1.1/tokenledger-0.1.1.tar.gz"
+  sha256 "331d49b44cf211414b401ae0126bab969644a5e45830343c9d0d8e2a12a214b6"
   license "MIT"
 
   livecheck do
@@ -39,7 +38,7 @@ class Tokenledger < Formula
   end
 
   test do
-    assert_match "tokenledger/0.1.0", shell_output("#{bin}/tokenledger version")
+    assert_match "tokenledger/0.1.1", shell_output("#{bin}/tokenledger version")
     assert_match "agent", shell_output("#{bin}/tokenledger status")
   end
 end
