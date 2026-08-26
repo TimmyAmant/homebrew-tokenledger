@@ -1,18 +1,21 @@
-# TimmyAmant Tokenledger
+# TokenLedger Homebrew tap
 
-## How do I install these formulae?
+macOS CLI for [TokenLedger](https://tokenledger.app). Reads local AI coding
+transcripts and uploads token counts — never prompts, completions, or file
+paths.
 
-`brew install timmyamant/tokenledger/<formula>`
-
-Or `brew tap timmyamant/tokenledger` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "timmyamant/tokenledger"
-brew "<formula>"
+```bash
+brew install TimmyAmant/tokenledger/tokenledger
+tokenledger login --url https://tokenledger.app
+tokenledger start
 ```
 
-## Documentation
+The fully-qualified name is required under Homebrew 6: `brew install tokenledger`
+looks in homebrew/core, and a short name from a third-party tap is only used
+after that formula is trusted. The one-liner above taps, trusts, and installs.
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+```bash
+tokenledger version
+tokenledger status
+tokenledger help
+```
