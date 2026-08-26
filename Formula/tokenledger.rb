@@ -22,11 +22,6 @@ class Tokenledger < Formula
     bin.install "tokenledger"
   end
 
-  test do
-    assert_match "tokenledger/0.1.0", shell_output("#{bin}/tokenledger version")
-    assert_match "agent", shell_output("#{bin}/tokenledger status")
-  end
-
   def caveats
     <<~EOS
       Homebrew 6 installs this by fully-qualified name:
@@ -41,5 +36,10 @@ class Tokenledger < Formula
       After `brew upgrade`, restart a running agent with `tokenledger restart`
       (or `tokenledger update`, which upgrades and restarts in one step).
     EOS
+  end
+
+  test do
+    assert_match "tokenledger/0.1.0", shell_output("#{bin}/tokenledger version")
+    assert_match "agent", shell_output("#{bin}/tokenledger status")
   end
 end
