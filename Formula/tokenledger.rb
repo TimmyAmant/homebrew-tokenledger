@@ -11,14 +11,14 @@ class Tokenledger < Formula
   sha256 "6878fc8b3058446935701ae25dfbd5cc763b8dce59c0bdd732d8a98d16d11294"
   license "MIT"
 
-  depends_on macos: :sonoma
-
-  conflicts_with "tokenboard", because: "tokenboard was the pre-rename binary of tokenledger"
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  conflicts_with "tokenboard", because: "tokenboard was the pre-rename binary of tokenledger"
+
+  depends_on macos: :sonoma
 
   def install
     bin.install "tokenledger"
