@@ -10,7 +10,6 @@ class Tokenledger < Formula
   url "https://github.com/TimmyAmant/homebrew-tokenledger/releases/download/v0.1.0/tokenledger-0.1.0.tar.gz"
   sha256 "6878fc8b3058446935701ae25dfbd5cc763b8dce59c0bdd732d8a98d16d11294"
   license "MIT"
-  version "0.1.0"
 
   depends_on macos: :sonoma
 
