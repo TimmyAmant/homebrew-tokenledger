@@ -16,8 +16,6 @@ class Tokenledger < Formula
     strategy :github_latest
   end
 
-  conflicts_with "tokenboard", because: "tokenboard was the pre-rename binary of tokenledger"
-
   depends_on macos: :sonoma
 
   def install
