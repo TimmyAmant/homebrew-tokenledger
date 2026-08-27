@@ -6,8 +6,8 @@
 class Tokenledger < Formula
   desc "Reads local AI coding transcripts and uploads token counts"
   homepage "https://tokenledger.app"
-  url "https://github.com/TimmyAmant/homebrew-tokenledger/releases/download/v0.1.3/tokenledger-0.1.3.tar.gz"
-  sha256 "262ca666662a6ac21f326dcbd25ac9dfbd3d180cc2f4c23cbe7152cfa9815354"
+  url "https://github.com/TimmyAmant/homebrew-tokenledger/releases/download/v0.1.4/tokenledger-0.1.4.tar.gz"
+  sha256 "675c1533058bdee0da9a9e6c8e1d63c4ddba3c87fbf0c8127a9d1220f3d2d1a2"
   license "MIT"
 
   livecheck do
@@ -38,7 +38,7 @@ class Tokenledger < Formula
   end
 
   test do
-    assert_match "tokenledger/0.1.3", shell_output("#{bin}/tokenledger version")
+    assert_match "tokenledger/0.1.4", shell_output("#{bin}/tokenledger version")
     assert_match "agent", shell_output("#{bin}/tokenledger status")
   end
 end
